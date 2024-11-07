@@ -1,0 +1,96 @@
+//code for SSD: Submit Assignment (as I selected submit assignment module)
+class AssignmentSystem {
+
+
+public void displayAssignmentStatus() {
+
+System.out.println("System displays assignment status.");
+
+}
+
+
+public void displaySubmitButton() {
+
+System.out.println("System displays submit button.");
+
+}
+
+
+public void showSubmittedSuccessfullyMessage() {
+
+System.out.println("System shows 'Submitted Successfully' message.");
+
+showChangeAssignmentButton();
+
+}
+
+
+public void showChangeAssignmentButton() {
+
+System.out.println("System displays 'Change Assignment' button.");
+
+}
+
+}
+
+
+class Student {
+
+AssignmentSystem assignmentSystem;
+
+
+public Student(AssignmentSystem assignmentSystem) {
+
+this.assignmentSystem = assignmentSystem;
+
+}
+
+
+public void clickOnAssignmentSummary() {
+
+System.out.println("Student clicked on assignment summary.");
+
+assignmentSystem.displayAssignmentStatus();
+
+}
+
+
+public void uploadAssignment() {
+
+System.out.println("Student uploaded the assignment.");
+
+assignmentSystem.displaySubmitButton();
+
+}
+
+
+public void clickOnSubmit() {
+
+System.out.println("Student clicked on submit.");
+
+assignmentSystem.showSubmittedSuccessfullyMessage();
+
+}
+
+}
+
+
+public class SubmitAssignment {
+
+
+public static void main(String[] args) {
+
+AssignmentSystem assignmentSystem = new AssignmentSystem();
+
+Student student = new Student(assignmentSystem);
+
+
+student.clickOnAssignmentSummary();
+
+student.uploadAssignment();
+
+student.clickOnSubmit();
+
+}
+
+}
