@@ -1,0 +1,92 @@
+//code for Communication diagram: Submit Assignment
+class Student {
+
+
+public void uploadAssignmentFile(String file, String studentID, String assignmentID) {
+
+System.out.println("Student uploads assignment file.");
+
+AssignmentSubmissionUI ui = new AssignmentSubmissionUI();
+
+ui.sendAssignment(file, studentID, assignmentID);
+
+}
+
+}
+
+
+class AssignmentSubmissionUI {
+
+
+public void sendAssignment(String file, String studentID, String assignmentID) {
+
+System.out.println("AssignmentSubmissionUI sends assignment to AssignmentController.");
+
+AssignmentController controller = new AssignmentController();
+
+controller.storeAssignment(file, studentID, assignmentID);
+
+}
+
+
+public void displayConfirmationMessage() {
+
+System.out.println("AssignmentSubmissionUI displays confirmation message to the student.");
+
+}
+
+}
+
+
+class AssignmentController {
+
+
+public void storeAssignment(String file, String studentID, String assignmentID) {
+
+System.out.println("AssignmentController stores assignment in AssignmentDatabase.");
+
+AssignmentDatabase database = new AssignmentDatabase();
+
+database.storeAssignment(file, studentID, assignmentID);
+
+confirmSubmission();
+
+}
+
+
+public void confirmSubmission() {
+
+System.out.println("AssignmentController confirms submission to AssignmentSubmissionUI.");
+
+AssignmentSubmissionUI ui = new AssignmentSubmissionUI();
+
+ui.displayConfirmationMessage();
+
+}
+
+}
+
+
+class AssignmentDatabase {
+
+
+public void storeAssignment(String file, String studentID, String assignmentID) {
+
+System.out.println("AssignmentDatabase stores the assignment details.");
+
+}
+
+}
+
+
+public class SubmitAssignment {
+
+public static void main(String[] args) {
+
+Student student = new Student();
+
+student.uploadAssignmentFile("AssignmentFile.pdf", "12345", "A01");
+
+}
+
+}
