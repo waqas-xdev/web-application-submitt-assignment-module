@@ -1,0 +1,130 @@
+//code for package diagram (submit assignment)
+public class SubmitAssignment {
+
+
+public static class Student {
+
+public void login() {
+
+System.out.println("Student logged in.");
+
+}
+
+
+public void accessAssignmentModule() {
+
+System.out.println("Student accessed the Assignment Module.");
+
+}
+
+}
+
+
+// Submit Assignment Module package
+
+public static class AssignmentForm {
+
+public void fillForm() {
+
+System.out.println("Filling out the assignment form.");
+
+}
+
+
+public void uploadFile() {
+
+System.out.println("Uploading assignment file.");
+
+}
+
+}
+
+
+public static class AssignmentService {
+
+private AssignmentDAO assignmentDAO = new AssignmentDAO();
+
+private FileStorageService fileStorageService = new FileStorageService();
+
+
+public void validateSubmission() {
+
+System.out.println("Validating assignment submission.");
+
+}
+
+
+public void saveAssignment() {
+
+System.out.println("Saving assignment data.");
+
+assignmentDAO.storeAssignmentData();
+
+fileStorageService.saveFile();
+
+}
+
+}
+
+
+public static class AssignmentDAO {
+
+public void storeAssignmentData() {
+
+System.out.println("Storing assignment data in database.");
+
+}
+
+}
+
+
+// File Storage package
+
+public static class FileStorageService {
+
+public void saveFile() {
+
+System.out.println("Saving file to storage.");
+
+}
+
+
+public void generateFileLink() {
+
+System.out.println("Generating file link.");
+
+}
+
+}
+
+
+// Main method to demonstrate functionality
+
+public static void main(String[] args) {
+
+// Creating instances
+
+Student student = new Student();
+
+AssignmentForm form = new AssignmentForm();
+
+AssignmentService service = new AssignmentService();
+
+
+// Simulating the submit assignment process
+
+student.login();
+
+student.accessAssignmentModule();
+
+form.fillForm();
+
+form.uploadFile();
+
+service.validateSubmission();
+
+service.saveAssignment();
+
+}
+
+}
