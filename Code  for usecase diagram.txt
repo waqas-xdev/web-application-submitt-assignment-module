@@ -1,0 +1,129 @@
+//Code  for usecase diagram
+
+public class UniversityPortal {
+
+
+public static void main(String[] args) {
+
+Student student = new Student();
+
+Teacher teacher = new Teacher();
+
+
+// Student interactions
+
+student.login();
+
+student.accessCourseContent();
+
+student.submitAssignment();
+
+student.viewResult();
+
+student.takeOnlineExam();
+
+
+// Teacher interactions
+
+teacher.login();
+
+teacher.uploadCourseContent();
+
+teacher.setAssignment();
+
+teacher.setQuiz();
+
+}
+
+}
+
+
+// Student class with relevant methods
+
+class Student {
+
+
+public void login() {
+
+System.out.println("Student logged in to the university portal.");
+
+}
+
+
+public void accessCourseContent() {
+
+System.out.println("Student accessed course content.");
+
+}
+
+
+public void uploadCourseContent() {
+
+System.out.println("Student uploaded course content.");
+
+}
+
+
+public void submitAssignment() {
+
+System.out.println("Student submitted assignment.");
+
+}
+
+
+public void viewResult() {
+
+System.out.println("Student viewed result.");
+
+}
+
+
+public void takeOnlineExam() {
+
+System.out.println("Student took online exam.");
+
+}
+
+}
+
+
+// Teacher class with relevant methods
+
+class Teacher {
+
+
+public void login() {
+
+System.out.println("Teacher logged in to the university portal.");
+
+}
+
+
+public void accessCourseContent() {
+
+System.out.println("Teacher accessed course content.");
+
+}
+
+
+public void uploadCourseContent() {
+
+System.out.println("Teacher uploaded course content.");
+
+}
+
+
+public void setAssignment() {
+
+System.out.println("Teacher set assignment.");
+
+}
+
+
+public void setQuiz() {
+
+System.out.println("Teacher set quiz.");
+
+}
+
+}
